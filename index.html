@@ -3,30 +3,184 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>bootstrap basics</title>
+    <title>navbar</title>
     <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/bootstrap/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 <body>
-    <h1 class="text-sucess text-center bg-primary-subtle">welcome to my page</h1>
-    <p class="text-warning">A paragraph with yellow color text</p>
-    <p class="text-primary">A paragraph with blue color</p>
-    <h2 class="info">back ground color</h2>
-    <p class="bg-warning"> a paragraph with yellow color</p>
-    <h2 class="bg-success">buttons</h2>
-    <button class="btn btn-danger btn-sm">click me</button>
-    <button class="btn btn-primary btn-lg">blue button</button>
-    <h2 class="text-sucess">outline buttons</h2>
-    <button class="btn btn-outline-danger">outline buttons</button>
-    <button class="btn btn-outline-primary">primary outline button</button>
-<script src="static/bootstrap/js/bootstrap.min.js"></script>
-<h2 class="text-sucess bg-info text-center">alerts</h2>
-<button class="btn btn-danger" onclick="alert('you clicked a button')">click me</button>
-<button class="btn btn-primary" onclick="displayalert()" >show/hidealert  </button>
-<div id="myalert" class="alert alert-warning d-none" role="alert">
-    a simple btstrap div
-</div>
-<script src="static/bootstrap/js/bootstrap.min.js"></script>
-<script src="static/js/script.js"></script>
+    <nav class="navbar bg-success navbar-dark navbar-expand-lg p-4">
+        <div class="container-fluid">
+            <a href="class=navbar-brand">HommyPets</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#opera">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <div class="collapse navbar-collapse" id="opera">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="index.html"  class="nav-link active">home</a></li>
+                    <li class="nav-item"><a class="nav-link"href="#About">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Services" >Services</a></li>
+                    <li><a class="nav-link"href="#">contact</a></li>
+                </ul>
+                
+            </div>
+
+        </div>
+
+    </nav>
+    <!-- carousel -->
+     <div id="mycarousel" class="carousel slide">
+          <!-- indicators  -->
+         <div class="carousel-indicators">
+             <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="0" class="active"></button>
+             <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="1" ></button>
+             <button type="button" data-bs-target="#mycarousel" data-bs-slide-to="2"></button>
+         </div>
+
+        
+        <!-- slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/bootstrap/images/landscape.jpeg" class="d-block w-100 safari" alt="">
+
+            </div>
+             <div class="carousel-item ">
+                <img src="static/bootstrap/images/lanscape2.jpeg"class="d-block w-100"safari alt="">
+
+            </div>
+             <div class="carousel-item">
+                <img src="static/bootstrap/images/landscape3.jpeg"class="d-block w-100"safari alt="">
+
+            </div>
+
+        </div>
+        <!-- previous button -->
+         <button class="carousel-control-prev" type="button" data-bs-target="#mycarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+
+         </button>
+         <!-- next button  -->
+            <button class="carousel-control-next" type="button" data-bs-target="#mycarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+      <!-- about section  -->
+      <div class="container my-5" id="about">
+        <h2 class="text-center text-danger fw-bold">About us</h2>
+        <!-- row  -->
+          <div class="row">
+            <!-- col  -->
+             <div class="col-md-6">
+                <h3 class="text-success">who we are </h3>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, illum labore, ab assumenda iusto eveniet neque perspiciatis recusandae minima inventore quis, nisi fugit provident asperiores aspernatur cupiditate! Optio, dolorem nisi.</p></div>
+             <!-- coumn2  -->
+             <div class="col-md-6"> 
+                <img src="static/bootstrap/images/landscape.jpeg" alt="" class="rounded">
+
+            </div>
+          </div>
+      </div>
+      <!-- services section  -->
+       <div class="container my-3" id="services" >
+        <h2 class="text-center text-success">our services</h2>
+        <!-- row  -->
+         <div class=row>
+            <!-- colummn1 -->
+             <div class="col-md-4">
+                <!-- card -->
+             <div class="card">
+                <img src="static/bootstrap/images/ax.jpeg" alt="">
+                <div class="card-body"><h5 class="card-title">mountain dew dog</h5>
+                    <p class="card-text">Mountain Dew Dog" most likely refers to Puppy Monkey Baby, the bizarre, viral mascot created for a 2016 Mountain Dew Super Bowl commercial. The character combined the head of a Pug puppy, the body of a monkey, and the diapered legs of a dancing baby to promote Mountain Dew Kickstart.</p>
+                    <a href="containers.html" class="btn btn-success"> learn more</a>
+                </div>
+
+             </div>
+             </div>
+             <!-- column2 -->
+               <div class="col-md-4">
+               <div class="card">
+                <img src="static/bootstrap/images/gsd.webp" alt="">
+                <div class="card-body"><h5 class="card-title">germanshephard dog</h5><p>The German Shepherd,[a] also known in Britain as an Alsatian, is a German breed of working dog of medium to large size. It is characterized by its intelligent and obedient nature.
+It was developed in Germany from 1899 by Max von Stephanitz, using various traditional German herding dogs, and gained international recognition after the end of the First World War. It was bred as a herding dog, for herding sheep, but has since been used in many other types of work, including disability assistance, search-and-rescue, police work, and warfare. It is commonly kept as a companion dog, and is among the most frequently registered breeds world-wide.</p>
+            <a href="containers.html" class="btn btn-success">learn more</a>
+          </div>
+          </div>
+          
+
+               </div>
+              <!-- column3 -->
+                <div class="col-md-4">
+                <div class="card">
+                   <img src="static/bootstrap/images/maltrese.jpeg">
+                    <img src="" alt="">
+                    <div class="card-body"><h5 class=card-title>maltese </h5><p class="card-text">
+                        The Maltese is a world-famous toy dog breed renowned for its show-stopping, floor-length coat of pure white hair and a gentle, affectionate personality. Originating in the Mediterranean island nation of Malta over 2,000 years ago, these tiny companions typically weigh under four kilograms and feature striking black eyes and button noses. Despite their aristocratic appearance, they are lively, highly intelligent, and deeply devoted to their owners, making them excellent indoor pets. They are considered hypoallergenic because they have hair instead of fur and do not shed heavily, though their luxurious coats require daily brushing to prevent painful mats and tangles. Because they crave human companionship, they thrive best in households where they are not left alone for long periods.
+                    </p>  <a href="containers.html" class="btn btn-success">learn more</a>
+
+                    
+                    </div>
+
+                </div>
+                </div>
+                </div>
+                </div>
+                <!-- footer  -->
+                 <footer class="bg-success text-white text-center">
+                <div class="container">
+                    <!-- row  -->
+                     <div class="row">
+                        <!-- column 1 -->
+                         <div class="col-md-4">
+                            <!-- company info  -->
+                             <h5 class="fw-bold">hommy pets</h5><p>we deal with rehoming adoption and sale of pets</p>
+                         </div>
+                         <!-- colmn 2  -->
+                          <div class="col-md-4">
+                            <h5>quick links</h5>
+                            <ul class="list-unstyled">
+                                <li><a href="index.html"  class="text-decoration-none text-white">home</a></li>
+                                <li><a href="About.html"  class="text-decoration-none text-white">About</a></li>
+                                <li><a  href="#Services.html"   class="text-decoration-none text-white">Services</a></li>
+                                <li><a href="#contacts.html"  class="text-decoration-none text-white">contact</a></li>
+                </ul>
+                
+                         
+                          </div>
+                          <!-- column 3  -->
+                        <div class="col-md-4">
+                            <h5 class="fw-bold">contact us</h5>
+                            <a href="https://x.com/"class="text-white" >
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                            <a href="https://www.instagram.com/ " class="text-white"> 
+                              <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="https://www.facebook.com/">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="https://ke.linkedin.com/">
+                                <i class="bi bi-linkedin"></i> </a>
+
+                                <p><i class="bi bi-telephone">0725444222</i></p>
+                                <p><i class="bi bi-envelope"></i>hommypets@gmail.com</p>
+                                <p><i class="bi bi-geo"></i>Westlands,Nairobi</p>
+
+                           </div>
+
+                     
+
+                </div>
+                <div>
+                    <hr>
+                </div class=text-center p-3>
+                <p>&copy;hommypets</p>
+         </div>
+
+       </div>
+</footer>
+    <script src="static/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
